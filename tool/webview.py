@@ -1,7 +1,8 @@
 from selenium import webdriver
 import os
 
-chromedriver = "D:/software/chromedriver" 
+# https://npm.taobao.org/mirrors/chromedriver/  阿里镜像
+chromedriver = "/Users/chenbing/Documents/file/chromedriver" 
 os.environ["webdriver.chrome.driver"] = chromedriver
 browser = webdriver.Chrome(chromedriver) #模拟打开浏览器
 browser.get("https://tieba.baidu.com/index.html")

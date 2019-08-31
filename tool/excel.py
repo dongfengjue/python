@@ -1,6 +1,7 @@
 import xlrd
 
-workbook = xlrd.open_workbook(u'1.xls')
+filePath = "/Users/chenbing/github/python/tool/1.xls"
+workbook = xlrd.open_workbook(filePath)
 
 sheet_names= workbook.sheet_names()
 
