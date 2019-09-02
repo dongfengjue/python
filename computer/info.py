@@ -29,7 +29,8 @@ def GetDiskInfo():
     i=0
     retlist1=[]
     retlist2=[]
-    while i< ilen:
+    # 过滤掉未知类型硬盘
+    while i< ilen and list[i].fstype != '':
         diskinfo = psutil.disk_usage(list[i].device)
         total_disk = round((float(diskinfo.total)/1024/1024/1024),2) #总大小
         used_disk = round((float(diskinfo.used) / 1024 / 1024 / 1024), 2) #已用大小
